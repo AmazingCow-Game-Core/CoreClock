@@ -46,15 +46,15 @@
 //We use MACROS so is easier to change if needed.
 //Is (in our opinion) more explicit.
 //And finally the editors will not reformat the code.
-#define NS_CORECLOCK_BEGIN namespace CoreCoord {
+#define NS_CORECLOCK_BEGIN namespace CoreClock {
 #define NS_CORECLOCK_END   }
-#define USING_NS_CORECLOCK using namespace CoreCoord
+#define USING_NS_CORECLOCK using namespace CoreClock
 
 //The core version number.
 #define COW_CORECLOCK_VERSION_MAJOR    "0"
 #define COW_CORECLOCK_VERSION_MINOR    "1"
-#define COW_CORECLOCK_VERSION_REVISION "0"
+#define COW_CORECLOCK_VERSION_REVISION "1"
 
-#define COW_CORECLOCK_VERSION "0.1.0"
+#define COW_CORECLOCK_VERSION "0.1.1"
 
 #endif // defined(__CoreCoord_include_CoreCoord_Utils_h__) //

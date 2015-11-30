@@ -60,15 +60,15 @@ public:
 
     // CTOR / DTOR //
 public:
-    BasicClock();
+    Clock();
 
-    BasicClock(float interval);
-    BasicClock(float interval, int repeat);
+    Clock(float interval);
+    Clock(float interval, int repeat);
 
-    BasicClock(float interval, const Callback &callback);
-    BasicClock(float interval, int repeat, const Callback &callback);
+    Clock(float interval, const Callback &callback);
+    Clock(float interval, int repeat, const Callback &callback);
 
-    virtual ~BasicClock();
+    virtual ~Clock();
 
     // Public Methods //
 public:
@@ -102,5 +102,5 @@ public:
     float m_updateTime;
 };
 
-NS_FISHGAME_END
+NS_CORECLOCK_END
 #endif // defined(__FishGame_include_helpers_BasicClock_h__) //
