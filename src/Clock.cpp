@@ -41,38 +41,38 @@
 
 
 //Header
-#include "../Clock.h"
+#include "../include/Clock.h"
 
 //Usings
 USING_NS_CORECLOCK;
 
 // Constants/Enums/Typedefs //
-const int BasicClock::kRepeatForever = -1;
+const int Clock::kRepeatForever = -1;
 
 // CTOR / DTOR //
-BasicClock::BasicClock() :
-    BasicClock(0)
+Clock::Clock() :
+    Clock(0)
 {
     //Empty...
 }
-BasicClock::BasicClock(float interval) :
-    BasicClock(interval, BasicClock::kRepeatForever)
+Clock::Clock(float interval) :
+    Clock(interval, Clock::kRepeatForever)
 {
     //Empty...
 }
-BasicClock::BasicClock(float interval, int repeat):
-    BasicClock(interval, BasicClock::kRepeatForever, Callback())
-{
-    //Empty...
-}
-
-BasicClock::BasicClock(float interval, const Callback &callback) :
-    BasicClock(interval, BasicClock::kRepeatForever, Callback())
+Clock::Clock(float interval, int repeat):
+    Clock(interval, Clock::kRepeatForever, Callback())
 {
     //Empty...
 }
 
-BasicClock::BasicClock(float interval, int repeat, const Callback &callback) :
+Clock::Clock(float interval, const Callback &callback) :
+    Clock(interval, Clock::kRepeatForever, Callback())
+{
+    //Empty...
+}
+
+Clock::Clock(float interval, int repeat, const Callback &callback) :
     m_interval   (interval),
     m_repeatCount(repeat),
     m_tickCount  (0),
@@ -84,28 +84,28 @@ BasicClock::BasicClock(float interval, int repeat, const Callback &callback) :
 }
 
 
-BasicClock::~BasicClock()
+Clock::~Clock()
 {
     //Empty...
 }
 
 // Public Methods //
 //Action Methods.
-void BasicClock::start()
+void Clock::start()
 {
     m_tickCount = 0;
 
     m_enabled    = true;
     m_updateTime = m_interval;
 }
-void BasicClock::stop()
+void Clock::stop()
 {
     m_enabled = false;
 }
 
-void BasicClock::update(float dt)
+void Clock::update(float dt)
 {
-    if(!m_enabled)
+    if(!m_enabled || m_tickCount >= m_repeatCount)
         return;
     
     m_updateTime -= dt;
@@ -120,33 +120,33 @@ void BasicClock::update(float dt)
 }
 
 //Setters/Getters.
-void BasicClock::setInterval(float interval)
+void Clock::setInterval(float interval)
 {
     m_interval = interval;
 }
-float BasicClock::getInterval() const
+float Clock::getInterval() const
 {
     return m_interval;
 }
 
-void BasicClock::setRepeatCount(int count)
+void Clock::setRepeatCount(int count)
 {
     m_repeatCount = count;
 }
-int BasicClock::getRepeatCount() const
+int Clock::getRepeatCount() const
 {
     return m_repeatCount;
 }
-int BasicClock::getTickCount() const
+int Clock::getTickCount() const
 {
     return m_tickCount;
 }
 
-void BasicClock::setTickCallback(const Callback &callback)
+void Clock::setTickCallback(const Callback &callback)
 {
     m_callback = callback;
 }
-const BasicClock::Callback& BasicClock::getTickCallback() const
+const Clock::Callback& Clock::getTickCallback() const
 {
     return m_callback;
 }
