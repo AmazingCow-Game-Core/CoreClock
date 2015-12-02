@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __FishGame_include_helpers_BasicClock_h__
-#define __FishGame_include_helpers_BasicClock_h__
+#ifndef __CoreClock_include_Clock_h__
+#define __CoreClock_include_Clock_h__
 
 //COWTODO: Add doxygen comments.
 
@@ -103,4 +103,4 @@ public:
 };
 
 NS_CORECLOCK_END
-#endif // defined(__FishGame_include_helpers_BasicClock_h__) //
+#endif // defined(__CoreClock_include_Clock_h__) //

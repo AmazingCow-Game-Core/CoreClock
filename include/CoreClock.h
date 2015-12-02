@@ -39,10 +39,10 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __CoreCoord_include_CoreCoord_h__
-#define __CoreCoord_include_CoreCoord_h__
+#ifndef __CoreClock_include_CoreClock_h__
+#define __CoreClock_include_CoreClock_h__
 
 #include "Clock.h"
 #include "CoreClock_Utils.h"
 
-#endif // defined(__CoreCoord_include_CoreCoord_h__) //
+#endif // defined(__CoreClock_include_CoreClock_h__) //
