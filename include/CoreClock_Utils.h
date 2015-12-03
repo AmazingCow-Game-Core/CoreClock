@@ -53,8 +53,8 @@
 //The core version number.
 #define COW_CORECLOCK_VERSION_MAJOR    "0"
 #define COW_CORECLOCK_VERSION_MINOR    "1"
-#define COW_CORECLOCK_VERSION_REVISION "3"
+#define COW_CORECLOCK_VERSION_REVISION "4"
 
-#define COW_CORECLOCK_VERSION "0.1.3"
+#define COW_CORECLOCK_VERSION "0.1.4"
 
 #endif // defined(__CoreClock_include_CoreClock_Utils_h__) //

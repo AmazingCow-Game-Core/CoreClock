@@ -105,7 +105,10 @@ void Clock::stop()
 
 void Clock::update(float dt)
 {
-    if(!m_enabled || m_tickCount >= m_repeatCount)
+    if(!m_enabled)
+        return;
+    
+    if(m_repeatCount != Clock::kRepeatForever && m_tickCount >= m_repeatCount)
         return;
     
     m_updateTime -= dt;
