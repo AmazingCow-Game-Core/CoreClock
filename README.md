@@ -87,17 +87,12 @@ Here is a list of them:
 * ```Clock.h```
 
 
-<!-- ####################################################################### -->
-
-## Usage:
-
-#COWTODO
 
 <!-- ####################################################################### -->
 
 ## More info:
 
-We tried to document the Core extensively, so we think that is pretty ease to 
+We tried to document the Core extensively, so we think that is pretty easy to 
 get what the Core is doing, the API calls and stuff.   
 Anyway if you didn't understand something let us know sending a mail to 
 ***help_opensource@amazingcow.com***  with the subject filled with the
