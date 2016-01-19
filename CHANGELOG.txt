@@ -14,3 +14,6 @@ v0.2.0 - [Jan 28 2016]
 
 v0.2.1 - [Jan 18 2016]
     - Add the doxygen comments.
+
+v0.2.2 - [Jan 19 2016]
+    - Change the license headers - The old way is better.
