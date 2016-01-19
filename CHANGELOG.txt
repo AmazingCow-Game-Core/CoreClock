@@ -11,3 +11,6 @@ v0.1.4 - [Nov 30 2015]
 v0.2.0 - [Jan 28 2016]
     - Change the license headers - Now they're bit less verbose.
     - Remove the usage section of README.
+
+v0.2.1 - [Jan 18 2016]
+    - Add the doxygen comments.
