@@ -50,7 +50,7 @@ NS_CORECLOCK_BEGIN
 
 class Clock
 {
-    // Constants/Enums/Typedefs //
+    // Constants / Enums / Typedefs //
 public:
     ///@brief Makes the clock ticks forever.
     ///The stop control must be manually set.
@@ -120,12 +120,12 @@ public:
     ///@warning No checks are made by the CTORs - Is the caller
     ///responsibility of give consistent and valid values.
     ///@see Clock::setInterval(), Clock::setRepeatCount(),
-    ///    Clock::setTickCallback().
+    ///     Clock::setTickCallback().
     Clock(float interval, int repeat, const Callback &callback);
 
     ///@brief DTOR.
-    //COWTODO: Check if there is the need of virtual dtor, i.e. this class
-    //COWTODO: should be enable to be a base class?
+    //COWTODO: Check if there is the need of virtual dtor, i.e. this class \
+    //         should be enable to be a base class?
     virtual ~Clock();
 
     // Public Methods //
