@@ -3,6 +3,7 @@ Core Coord
 Made with <3 by [Amazing Cow](http://www.amazingcow.com).
 
 <!-- ####################################################################### -->
+<!-- ####################################################################### -->
 
 ## Intro:
 
@@ -13,7 +14,8 @@ stuff we decide to create the ```Clock``` class to keep it very encapsulated.
 For example, let's assume that we want to trigger some operation 3 times with 
 1 second between them. One possible implementation could be:
 
-```
+```c++
+
 //In SomeClass.h
 ...
 float m_timeSinceLastTick;
@@ -46,7 +48,8 @@ void SomeClass::update(float dt)
 We find this very, very cumbersome, not clear, ugly...    
 We prefer:
 
-```
+```c++
+
 //In SomeClass.h
 ...
 CoreClock::Clock m_clock;
@@ -69,12 +72,16 @@ void SomeClass::update(float dt)
     //Clock will ignore updates after 3 ticks...
     m_clock.update(dt);
 }
+
 ```
 
 Much more easier hun???
 
 You are welcome to use, hack and share it :)
 
+
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## Files:
@@ -89,6 +96,7 @@ Here is a list of them:
 
 
 <!-- ####################################################################### -->
+<!-- ####################################################################### -->
 
 ## More info:
 
@@ -99,19 +107,39 @@ Anyway if you didn't understand something let us know sending a mail to
 name of this repo.
 
 
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## License:
+
 This software is released under GPLv3.
 
 
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
+
 ## TODO:
-Check the TODO file.
+
+Check the TODO file for general things.
+
+This projects uses the COWTODO tags.   
+So install [cowtodo](http://www.github.com/AmazingCow-Tools/COWTODO.html) and run:
+
+``` bash
+$ cd CoreClock
+$ cowtodo 
+```
+
+That's gonna give you all things to do :D.
 
 
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## Others:
+
 Check our repos and take a look at our [open source site](http://opensource.amazingcow.com).
