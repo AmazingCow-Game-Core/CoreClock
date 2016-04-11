@@ -1,19 +1,33 @@
-v0.1.0 - Initial version.
-v0.1.1 - ????
-v0.1.2 - ????
+v0.2.3 - [Apr 10 2016]
+    - Some cosmetic changes.
+    - Update the README
+        - Add comments separators.
+        - Add info in TODO section.
+        - Make the examples be colored.
+    - Update the CHANGELOG
+        - Change the sort order (Now the newer entries are in top).
 
-v0.1.3 - [Nov 30 2015]
-    - Add the info files.
+v0.2.2 - [Jan 19 2016]
+    - Change the license headers - The old way is better.
 
-v0.1.4 - [Nov 30 2015]
-    - Fix the update method.
+v0.2.1 - [Jan 18 2016]
+    - Add the doxygen comments.
 
 v0.2.0 - [Jan 28 2016]
     - Change the license headers - Now they're bit less verbose.
     - Remove the usage section of README.
 
-v0.2.1 - [Jan 18 2016]
-    - Add the doxygen comments.
+--------------------------------------------------------------------------------
+v0.1.4 - [Nov 30 2015]
+    - Fix the update method.
 
-v0.2.2 - [Jan 19 2016]
-    - Change the license headers - The old way is better.
+v0.1.3 - [Nov 30 2015]
+    - Add the info files.
+
+v0.1.2 - ????
+
+v0.1.1 - ????
+
+v0.1.0 - Initial version.
+
+
