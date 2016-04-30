@@ -46,6 +46,7 @@
 //CoreClock
 #include "CoreClock_Utils.h"
 
+
 NS_CORECLOCK_BEGIN
 
 class Clock
@@ -141,10 +142,8 @@ public:
     ///     Clock::getRepeatCount(), Clock::getTickCallback().
     void start();
 
-    ///@brief Starts the clock, i.e it will be enabled in Clock::update.
-    ///If the current tick count is less the repeat count, the Clock will
-    ///call the callback when the interval is reached.
-    ///@see Clock::stop(), Clock::update(), Clock::getInterval(),
+    ///@brief Stops the clock, i.e it will not be enabled in Clock::update.
+    ///@see Clock::start(), Clock::update(), Clock::getInterval(),
     ///     Clock::getRepeatCount(), Clock::getTickCallback().
     void stop();
 
@@ -153,7 +152,7 @@ public:
     ///must be consistent at the same object) and possibly fire the callback
     ///if the conditions are met, otherwise the update method is
     ///just a early return call.
-    ///@note The callback is fire if:
+    ///@note The callback is fired if:
     ///@note 1. Clock is enabled
     ///@note 2. Tick count is < than Repeat Count or Clock::kRepeatForever is set.
     ///@note 3 - Interval is reached - Pretty obvious.
