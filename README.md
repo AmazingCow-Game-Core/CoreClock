@@ -20,7 +20,7 @@ The Amazing Cow's Game Cores site.
 
 ## Description:
 
-```CoreCoord``` is a small library intended to easy the time tracking in games,
+```CoreClock``` is a small library intended to easy the time tracking in games,
 but it general enough to be used in a myriad of situations.  
 It can be used to _fire events_ after some time, giving a very flexible way 
 to handle animations, callbacks and other stuff. 
