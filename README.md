@@ -1,29 +1,66 @@
-Core Coord 
-====
-Made with <3 by [Amazing Cow](http://www.amazingcow.com).
+# CoreClock
+
+**Made with <3 by [Amazing Cow](http://www.amazingcow.com).**
+
+
 
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
-## Intro:
+## Websites:
 
-In some games we need to perform some operation repeatedly, or after some time, 
-so instead of messing with ```ivars``` to keep track of time and all other "low-level"
-stuff we decide to create the ```Clock``` class to keep it very encapsulated.
+* [CoreClock Website](http://opensource.amazingcow.com/gamecore/coreclock/)
+* [Game Core Website](http://opensource.amazingcow.com/gamecore/) - 
+The Amazing Cow's Game Cores site.
 
-For example, let's assume that we want to trigger some operation 3 times with 
-1 second between them. One possible implementation could be:
+
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+
+## Description:
+
+```CoreCoord``` is a small library intended to easy the time tracking in games,
+but it general enough to be used in a myriad of situations.  
+It can be used to _fire events_ after some time, giving a very flexible way 
+to handle animations, callbacks and other stuff. 
+
+
+### Motivation:
+
+In some games we need to perform some operation repeatedly, or after some time.    
+So instead of messing with _ivars_ to keep track of time and all other _"low-level"_
+stuff we decide to create the ```CoreClock``` class to keep it very encapsulated.
+
+
+<br>
+As usual, you are **very welcomed** to **share** and **hack** it.
+
+
+
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+
+# Examples:
+
+Let's imagine a scenario that we want to trigger some operation 3 times with 
+1 second between them. This will let us appreciate how CoreClock will ease our lives.
+
+#### One possible implementation could be:
 
 ```c++
-
-//In SomeClass.h
-...
+///////////////////////////
+//In SomeClass.h         //
+///////////////////////////
 float m_timeSinceLastTick;
 float m_timeToTick; 
 float m_repeatTickCount;
-...
 
-//In SomeClass.cpp
+
+///////////////////////////
+//In SomeClass.cpp       //
+///////////////////////////
 void SomeClass::initClock()
 {
     m_timeSinceLastTick = 0;
@@ -33,6 +70,8 @@ void SomeClass::initClock()
 
 void SomeClass::update(float dt)
 {
+    //This is straightforward, but we don't like to have to 
+    //do this every time that we need a timer of some sort.
     m_timeSinceLastTick += dt;
     if(m_repeatTickCount > 0 && m_timeSinceLastTick >= m_timeToTick)
     {
@@ -46,19 +85,22 @@ void SomeClass::update(float dt)
 ```
 
 We find this very, very cumbersome, not clear, ugly...    
-We prefer:
+
+#### With CoreClock:
 
 ```c++
-
-//In SomeClass.h
-...
+/////////////////////////
+//In SomeClass.h       //
+/////////////////////////
 CoreClock::Clock m_clock;
 ...
 
-//In SomeClass.cpp
+///////////////////////////
+//In SomeClass.cpp       //
+///////////////////////////
 void SomeClass::initClock()
 {
-    m_clock.setInterval(1000);
+    m_clock.setInterval(1000); //Ms, but can be anything that you like.
     m_clock.setRepeatCount(3);
     
     //This can be a lambda, a Functor etc...
@@ -77,34 +119,33 @@ void SomeClass::update(float dt)
 
 Much more easier hun???
 
-You are welcome to use, hack and share it :)
 
 
 
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
-## Files:
+## Documentation:
 
-We tried to separated the files in a very organized form.   
-Here is a list of them:
+We strive to make our source code fully documented.   
+While there are a myriad of comments, one might find useful take a look at:
 
-* ```CoreClock.h```
-* ```CoreClock_Utils.h```
-* ```Clock.h```
+* [Project Website](http://opensource.amazingcow.com/gamecore/coreclock/).
+* [Doxygen Docs](http://opensource.amazingcow.com/gamecore/coreclock/doxygen/).
+* [A list of blog posts about the project](http://opensource.amazingcow.com/gamecore/coreclock/posts/).
 
-
-
-<!-- ####################################################################### -->
-<!-- ####################################################################### -->
-
-## More info:
-
-We tried to document the Core extensively, so we think that is pretty easy to 
-get what the Core is doing, the API calls and stuff.   
-Anyway if you didn't understand something let us know sending a mail to 
-***help_opensource@amazingcow.com***  with the subject filled with the
+Anyway if you didn't understand something let us know sending a mail to  
+[help_opensource@amazingcow.com]() with the subject filled with the
 name of this repo.
+
+
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+
+## Dependencies:
+
+There is no dependency for ```CoreClock```.
 
 
 
@@ -120,16 +161,15 @@ This software is released under GPLv3.
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
-
 ## TODO:
 
 Check the TODO file for general things.
 
 This projects uses the COWTODO tags.   
-So install [cowtodo](http://www.github.com/AmazingCow-Tools/COWTODO.html) and run:
+So install [cowtodo](http://www.github.com/AmazingCow-Tools/COWTODO) and run:
 
 ``` bash
-$ cd CoreClock
+$ cd path/to/the/project
 $ cowtodo 
 ```
 
@@ -142,4 +182,5 @@ That's gonna give you all things to do :D.
 
 ## Others:
 
-Check our repos and take a look at our [open source site](http://opensource.amazingcow.com).
+Check our repos and take a look at our 
+[open source site](http://opensource.amazingcow.com).
