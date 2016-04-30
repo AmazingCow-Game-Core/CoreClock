@@ -1,3 +1,35 @@
+================================================================================
+| Version 0.2.x                                                                |
+================================================================================
+v0.2.4 - [Apr 30 2016]
+-- General --
+    - Fix some documentation errors.
+    - New README.
+    - Add doxygen stuff.
+
+-- Source --
+    include/CoreClock_Utils.h
+        - Update version numbers.
+
+    include/Clock.h
+        - The the wrong documentation of Clock::stop().
+        - Fix typo.
+
+-- Info Files --
+    README.md
+        - Rewrite the README to consistency with other Amazing Cow's READMEs.
+
+    CHANGELOG.txt
+        - Split the CHANGELOG entry in sections.
+
+    mainpage.dox
+        - Add the mainpage doxygen documentation.
+
+-- Others --
+    Doxyfile
+        - Add the doxygen configuration.
+
+--------------------------------------------------------------------------------
 v0.2.3 - [Apr 10 2016]
     - Some cosmetic changes.
     - Update the README
@@ -7,17 +39,24 @@ v0.2.3 - [Apr 10 2016]
     - Update the CHANGELOG
         - Change the sort order (Now the newer entries are in top).
 
+--------------------------------------------------------------------------------
 v0.2.2 - [Jan 19 2016]
     - Change the license headers - The old way is better.
 
+--------------------------------------------------------------------------------
 v0.2.1 - [Jan 18 2016]
     - Add the doxygen comments.
 
+--------------------------------------------------------------------------------
 v0.2.0 - [Jan 28 2016]
     - Change the license headers - Now they're bit less verbose.
     - Remove the usage section of README.
 
---------------------------------------------------------------------------------
+
+
+================================================================================
+| Version 0.1.x                                                                |
+================================================================================
 v0.1.4 - [Nov 30 2015]
     - Fix the update method.
 
