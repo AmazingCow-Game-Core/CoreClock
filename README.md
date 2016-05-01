@@ -42,7 +42,7 @@ As usual, you are **very welcomed** to **share** and **hack** it.
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
-# Examples:
+## Examples:
 
 Let's imagine a scenario that we want to trigger some operation 3 times with 
 1 second between them. This will let us appreciate how CoreClock will ease our lives.
