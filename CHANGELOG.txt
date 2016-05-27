@@ -1,4 +1,27 @@
 ================================================================================
+| Version 0.3.x                                                                |
+================================================================================
+v0.3.0 - May 27, 2016
+-- General --
+    - Add new callbacks (for when the clock is done) and methods
+      to ease the clock manipulation.
+    - Fix a bug in one of the CTOR.
+    
+-- Source 
+    include/CoreClock_Utils.h
+        - Update the version numbers.
+    
+    include/Clock.h
+    src/Clock.cpp
+        - Change the signature of the CTORs to 
+          add the new doneCallback.
+        - Cosmetic changes.
+        - Add the new isDone() method to check
+          if the clock finished ticking.
+        - Add some COWTODOs.
+
+
+================================================================================
 | Version 0.2.x                                                                |
 ================================================================================
 v0.2.4 - [Apr 30 2016]
