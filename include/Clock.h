@@ -57,13 +57,16 @@ public:
     ///The stop control must be manually set.
     static const int kRepeatForever;
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Just to ease the typing the type.
     ///This is the signature of the function that will
     ///be called when the Clock's interval is reached.
     typedef std::function<void ()> Callback;
 
+
     // CTOR / DTOR //
 public:
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Constructs the Clock as:
     ///  interval = 0.
     ///  repeat   = Clock::kRepeatForever.
@@ -73,6 +76,7 @@ public:
     ///     Clock::setTickCallback().
     Clock();
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Constructs the Clock as:
     ///  interval = as given.
     ///  repeat   = Clock::kRepeatForever.
@@ -85,6 +89,7 @@ public:
     ///     Clock::setTickCallback().
     Clock(float interval);
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Constructs the Clock as:
     ///  interval = as given.
     ///  repeat   = as given.
@@ -98,6 +103,7 @@ public:
     ///     Clock::setTickCallback().
     Clock(float interval, int repeat);
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Constructs the Clock as:
     ///  interval = as given.
     ///  repeat   = Clock::kRepeatForever.
@@ -110,8 +116,11 @@ public:
     ///responsibility of give consistent and valid values.
     ///@see Clock::setInterval(), Clock::setRepeatCount(),
     ///     Clock::setTickCallback().
-    Clock(float interval, const Callback &callback);
+    Clock(float interval,
+          const Callback &tickCallback,
+          const Callback &doneCallback = Callback());
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Constructs the Clock with the given arguments.
     ///The Clock must be started manually.
     ///@param interval - A positive value.
@@ -122,16 +131,20 @@ public:
     ///responsibility of give consistent and valid values.
     ///@see Clock::setInterval(), Clock::setRepeatCount(),
     ///     Clock::setTickCallback().
-    Clock(float interval, int repeat, const Callback &callback);
+    Clock(float interval,
+          int repeat,
+          const Callback &tickCallback,
+          const Callback &doneCallback = Callback());
 
     ///@brief DTOR.
     //COWTODO: Check if there is the need of virtual dtor, i.e. this class \
     //         should be enable to be a base class?
     virtual ~Clock();
 
-    // Public Methods //
+
+    // Action Methods //
 public:
-    //Action Methods.
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Starts the clock, i.e it will be enabled in Clock::update.
     ///If the current tick count is less the repeat count, the Clock will
     ///call the callback when the interval is reached.
@@ -142,12 +155,16 @@ public:
     ///     Clock::getRepeatCount(), Clock::getTickCallback().
     void start();
 
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Stops the clock, i.e it will not be enabled in Clock::update.
     ///@see Clock::start(), Clock::update(), Clock::getInterval(),
     ///     Clock::getRepeatCount(), Clock::getTickCallback().
     void stop();
 
 
+    // Update Methods //
+public:
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Updates the current amount of "time" (The unit is irrelevant, but
     ///must be consistent at the same object) and possibly fire the callback
     ///if the conditions are met, otherwise the update method is
@@ -162,7 +179,9 @@ public:
     void update(float dt);
 
 
-    //Setters/Getters.
+    // Interval Methods //
+public:
+    //COWTODO: DOCUMENTATION IS OUTDATED.
     ///@brief Sets the interval (the unit is irrelevant, but must be consistent
     ///at the same object) time for the Clock.
     ///@param interval - A positive value.
@@ -175,6 +194,8 @@ public:
     float getInterval() const;
 
 
+    // Repeat Count Methods //
+public:
     ///@brief Sets the Repeat Count.
     ///When the Tick count is greater than the Repeat Count the update method
     ///will stop fire the callback.
@@ -188,12 +209,21 @@ public:
     int getRepeatCount() const;
 
 
+
+    // Tick Count / Query Methods //
+public:
     ///@brief Gets the current Tick Count.
     ///@returns The current Tick Count.
     ///@see Clock::getRepeatCount().
     int getTickCount() const;
 
 
+    //COWTODO: Add documentation.
+    bool isDone() const;
+
+
+    // Callback  Methods //
+public:
     ///@brief Set the function that will be called we the
     ///conditions are met in Clock::update().
     ///@param callback - A valid callback function.
@@ -202,6 +232,12 @@ public:
     ///@brief Gets the const ref for the callback.
     const Callback& getTickCallback() const;
 
+    //COWTODO: Add documentation.
+    void setDoneCallback(const Callback &callback);
+    //COWTODO: Add documentation.
+    const Callback& getDoneCallback() const;
+
+
     // iVars //
 public:
     float m_interval;
@@ -209,7 +245,8 @@ public:
     int m_repeatCount;
     int m_tickCount;
 
-    Callback m_callback;
+    Callback m_tickCallback;
+    Callback m_doneCallback;
 
     bool  m_enabled;
     float m_updateTime;

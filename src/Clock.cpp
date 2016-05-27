@@ -44,39 +44,58 @@
 //Usings
 USING_NS_CORECLOCK;
 
-// Constants/Enums/Typedefs //
+////////////////////////////////////////////////////////////////////////////////
+// Constants / Enums / Typedefs                                               //
+////////////////////////////////////////////////////////////////////////////////
 const int Clock::kRepeatForever = -1;
 
-// CTOR / DTOR //
+
+////////////////////////////////////////////////////////////////////////////////
+// CTOR / DTOR                                                                //
+////////////////////////////////////////////////////////////////////////////////
 Clock::Clock() :
     Clock(0)
 {
     //Empty...
 }
+
 Clock::Clock(float interval) :
     Clock(interval, Clock::kRepeatForever)
 {
     //Empty...
 }
+
 Clock::Clock(float interval, int repeat):
-    Clock(interval, Clock::kRepeatForever, Callback())
+    Clock(interval,
+          Clock::kRepeatForever,
+          Callback(), //Tick
+          Callback()) //Done
 {
     //Empty...
 }
 
-Clock::Clock(float interval, const Callback &callback) :
-    Clock(interval, Clock::kRepeatForever, Callback())
+Clock::Clock(float interval,
+             const Callback &tickCallback,
+             const Callback &doneCallback /* = Callback() */ ) :
+    Clock(interval,
+          Clock::kRepeatForever,
+          tickCallback,
+          doneCallback)
 {
     //Empty...
 }
 
-Clock::Clock(float interval, int repeat, const Callback &callback) :
-    m_interval   (interval),
-    m_repeatCount(repeat),
-    m_tickCount  (0),
-    m_callback   (callback),
-    m_enabled    (false),
-    m_updateTime (interval)
+Clock::Clock(float interval,
+             int repeat,
+             const Callback &tickCallback,
+             const Callback &doneCallback /* = Callback() */) :
+    m_interval    (interval),
+    m_repeatCount (repeat),
+    m_tickCount   (0),
+    m_tickCallback(tickCallback),
+    m_doneCallback(doneCallback),
+    m_enabled     (false),
+    m_updateTime  (interval)
 {
     //Empty...
 }
@@ -87,8 +106,10 @@ Clock::~Clock()
     //Empty...
 }
 
-// Public Methods //
-//Action Methods.
+
+////////////////////////////////////////////////////////////////////////////////
+// Action Methods                                                             //
+////////////////////////////////////////////////////////////////////////////////
 void Clock::start()
 {
     m_tickCount = 0;
@@ -96,10 +117,12 @@ void Clock::start()
     m_enabled    = true;
     m_updateTime = m_interval;
 }
+
 void Clock::stop()
 {
     m_enabled = false;
 }
+
 
 void Clock::update(float dt)
 {
@@ -115,21 +138,32 @@ void Clock::update(float dt)
         m_updateTime = m_interval;
         ++m_tickCount;
 
-        if(m_callback)
-            m_callback();
+        if(m_tickCallback)
+            m_tickCallback();
+
+        if(m_tickCount == m_repeatCount && m_doneCallback)
+            m_doneCallback();
     }
 }
 
-//Setters/Getters.
+
+////////////////////////////////////////////////////////////////////////////////
+// Interval Methods                                                           //
+////////////////////////////////////////////////////////////////////////////////
 void Clock::setInterval(float interval)
 {
     m_interval = interval;
 }
+
 float Clock::getInterval() const
 {
     return m_interval;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+// Repeat Count Methods                                                       //
+////////////////////////////////////////////////////////////////////////////////
 void Clock::setRepeatCount(int count)
 {
     m_repeatCount = count;
@@ -138,16 +172,41 @@ int Clock::getRepeatCount() const
 {
     return m_repeatCount;
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Tick Count / Query Methods                                                 //
+////////////////////////////////////////////////////////////////////////////////
 int Clock::getTickCount() const
 {
     return m_tickCount;
 }
 
+bool Clock::isDone() const
+{
+    return m_tickCount == m_repeatCount;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Callback Methods                                                           //
+////////////////////////////////////////////////////////////////////////////////
 void Clock::setTickCallback(const Callback &callback)
 {
-    m_callback = callback;
+    m_tickCallback = callback;
 }
+
 const Clock::Callback& Clock::getTickCallback() const
 {
-    return m_callback;
+    return m_tickCallback;
+}
+
+void Clock::setDoneCallback(const Callback &callback)
+{
+    m_doneCallback = callback;
+}
+
+const Clock::Callback& Clock::getDoneCallback() const
+{
+    return m_doneCallback;
 }
