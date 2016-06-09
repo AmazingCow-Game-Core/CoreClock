@@ -67,7 +67,7 @@ Clock::Clock(float interval) :
 
 Clock::Clock(float interval, int repeat):
     Clock(interval,
-          Clock::kRepeatForever,
+          repeat,
           Callback(), //Tick
           Callback()) //Done
 {
