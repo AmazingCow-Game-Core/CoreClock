@@ -137,9 +137,7 @@ public:
           const Callback &doneCallback = Callback());
 
     ///@brief DTOR.
-    //COWTODO: Check if there is the need of virtual dtor, i.e. this class \
-    //         should be enable to be a base class?
-    virtual ~Clock();
+    ~Clock();
 
 
     // Action Methods //
