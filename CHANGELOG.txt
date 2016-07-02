@@ -1,22 +1,27 @@
 ================================================================================
 | Version 0.4.x                                                                |
 ================================================================================
+v0.4.2 - Jul 2, 2016
+-- General --
+    - Improve the documentation and let it up to date with source.
+
+--------------------------------------------------------------------------------
 v0.4.1 - Jun 09, 2016
--- General -- 
+-- General --
      - [BUGFIX] Was passing wrong argument to ctor.
      - Remove some COWTODOs.
-     
-     
+
+
 --------------------------------------------------------------------------------
 v0.4.0 - May 27, 2016
--- General -- 
+-- General --
     - Update the COW_CORECLOCK_VERSION define.
       now it will be the concat of the version components.
-    
-    - Add the update version script 
+
+    - Add the update version script
       We were forgetting to update the versions.
-      
-    - SINCE NOW WE WILL STOP SAYING THAT WE 
+
+    - SINCE NOW WE WILL STOP SAYING THAT WE
       UPDATE THE VERSION NUMBERS IN CHANGELOG.
 
 
@@ -28,14 +33,14 @@ v0.3.0 - May 27, 2016
     - Add new callbacks (for when the clock is done) and methods
       to ease the clock manipulation.
     - Fix a bug in one of the CTOR.
-    
--- Source 
+
+-- Source
     include/CoreClock_Utils.h
         - Update the version numbers.
-    
+
     include/Clock.h
     src/Clock.cpp
-        - Change the signature of the CTORs to 
+        - Change the signature of the CTORs to
           add the new doneCallback.
         - Cosmetic changes.
         - Add the new isDone() method to check
