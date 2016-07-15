@@ -1,6 +1,11 @@
 ================================================================================
 | Version 0.4.x                                                                |
 ================================================================================
+v0.4.3 - Jul 15, 2016
+-- General --
+    - Update the mainpage.dox and README with the correct amazing cow links.
+
+--------------------------------------------------------------------------------
 v0.4.2 - Jul 2, 2016
 -- General --
     - Improve the documentation and let it up to date with source.
