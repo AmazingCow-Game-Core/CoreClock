@@ -1,21 +1,39 @@
 ================================================================================
 | Version 0.4.x                                                                |
 ================================================================================
+v0.4.4 - Oct 28, 2017
+-- General --
+    This release updates all license header files, move the info and
+    doxygen files to the docs directory and make some updates to the
+    update_version.sh script.
+
+-- Changed --
+    - Update the license headers to the Amazing Cow's new ones.
+    - Moved from include guards to #pragma once.
+    - A lot of cosmetic changes.
+    - Move the info files to docs folder.
+    - Move the doxygen files to docs folder.
+    - Update the mainpage.dox with the correct links.
+    - Update the update_version.sh script to the correct location of DOXYFILE.
+
+
+--------------------------------------------------------------------------------
 v0.4.3 - Jul 15, 2016
 -- General --
     - Update the mainpage.dox and README with the correct amazing cow links.
+
 
 --------------------------------------------------------------------------------
 v0.4.2 - Jul 2, 2016
 -- General --
     - Improve the documentation and let it up to date with source.
 
+
 --------------------------------------------------------------------------------
 v0.4.1 - Jun 09, 2016
 -- General --
      - [BUGFIX] Was passing wrong argument to ctor.
      - Remove some COWTODOs.
-
 
 --------------------------------------------------------------------------------
 v0.4.0 - May 27, 2016
@@ -84,6 +102,7 @@ v0.2.4 - [Apr 30 2016]
     Doxyfile
         - Add the doxygen configuration.
 
+
 --------------------------------------------------------------------------------
 v0.2.3 - [Apr 10 2016]
     - Some cosmetic changes.
@@ -94,19 +113,21 @@ v0.2.3 - [Apr 10 2016]
     - Update the CHANGELOG
         - Change the sort order (Now the newer entries are in top).
 
+
 --------------------------------------------------------------------------------
 v0.2.2 - [Jan 19 2016]
     - Change the license headers - The old way is better.
+
 
 --------------------------------------------------------------------------------
 v0.2.1 - [Jan 18 2016]
     - Add the doxygen comments.
 
+
 --------------------------------------------------------------------------------
 v0.2.0 - [Jan 28 2016]
     - Change the license headers - Now they're bit less verbose.
     - Remove the usage section of README.
-
 
 
 ================================================================================
