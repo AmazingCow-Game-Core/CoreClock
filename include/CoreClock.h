@@ -18,10 +18,7 @@
 //                                                                            //
 //---------------------------------------------------------------------------~//
 
-#ifndef __CoreClock_include_CoreClock_h__
-#define __CoreClock_include_CoreClock_h__
+#pragma once
 
 #include "Clock.h"
 #include "CoreClock_Utils.h"
-
-#endif // defined(__CoreClock_include_CoreClock_h__) //

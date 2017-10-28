@@ -18,8 +18,7 @@
 //                                                                            //
 //---------------------------------------------------------------------------~//
 
-#ifndef __CoreClock_include_CoreClock_Utils_h__
-#define __CoreClock_include_CoreClock_Utils_h__
+#pragma once
 
 //All classes of this core is placed inside this namespace.
 //We use MACROS so is easier to change if needed.
@@ -38,5 +37,3 @@
     COW_CORECLOCK_VERSION_MAJOR "." \
     COW_CORECLOCK_VERSION_MINOR "." \
     COW_CORECLOCK_VERSION_REVISION
-
-#endif // defined(__CoreClock_include_CoreClock_Utils_h__) //

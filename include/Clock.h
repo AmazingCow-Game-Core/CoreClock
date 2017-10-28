@@ -18,8 +18,7 @@
 //                                                                            //
 //---------------------------------------------------------------------------~//
 
-#ifndef __CoreClock_include_Clock_h__
-#define __CoreClock_include_Clock_h__
+#pragma once
 
 //std
 #include <functional>
@@ -291,4 +290,3 @@ public:
 };
 
 NS_CORECLOCK_END
-#endif // defined(__CoreClock_include_Clock_h__) //
