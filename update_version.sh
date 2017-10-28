@@ -29,7 +29,7 @@
 ################################################################################
 PROJECT_NAME="CORECLOCK"
 HEADER_FILE=./include/CoreClock_Utils.h
-DOXY_FILE=Doxyfile
+DOXY_FILE=./docs/Doxyfile
 
 
 ################################################################################
