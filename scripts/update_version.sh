@@ -36,6 +36,8 @@ VERSION="$1";
 ##----------------------------------------------------------------------------##
 ## Script                                                                     ##
 ##----------------------------------------------------------------------------##
+## update_version github:
+##   https://github.com/AmazingCow-Tools/update_version
 update_version  \
   $PROJECT_NAME \
   $VERSION      \
