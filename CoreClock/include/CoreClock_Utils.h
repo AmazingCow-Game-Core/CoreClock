@@ -20,6 +20,9 @@
 
 #pragma once
 
+//----------------------------------------------------------------------------//
+// Namespace                                                                  //
+//----------------------------------------------------------------------------//
 //All classes of this core is placed inside this namespace.
 //We use MACROS so is easier to change if needed.
 //Is (in our opinion) more explicit.
@@ -28,6 +31,10 @@
 #define NS_CORECLOCK_END   }
 #define USING_NS_CORECLOCK using namespace CoreClock
 
+
+//----------------------------------------------------------------------------//
+// Version                                                                    //
+//----------------------------------------------------------------------------//
 //The core version number.
 #define COW_CORECLOCK_VERSION_MAJOR    "0"
 #define COW_CORECLOCK_VERSION_MINOR    "4"

@@ -20,5 +20,8 @@
 
 #pragma once
 
-#include "Clock.h"
-#include "CoreClock_Utils.h"
+//----------------------------------------------------------------------------//
+// Export Headers                                                             //
+//----------------------------------------------------------------------------//
+#include "include/Clock.h"
+#include "include/CoreClock_Utils.h"
