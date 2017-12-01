@@ -37,8 +37,8 @@
 //----------------------------------------------------------------------------//
 //The core version number.
 #define COW_CORECLOCK_VERSION_MAJOR    "0"
-#define COW_CORECLOCK_VERSION_MINOR    "4"
-#define COW_CORECLOCK_VERSION_REVISION "4"
+#define COW_CORECLOCK_VERSION_MINOR    "5"
+#define COW_CORECLOCK_VERSION_REVISION "0"
 
 #define COW_CORECLOCK_VERSION       \
     COW_CORECLOCK_VERSION_MAJOR "." \
