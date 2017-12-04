@@ -1,4 +1,20 @@
 ================================================================================
+| Version 0.5.x                                                                |
+================================================================================
+v0.5.0 - Dec 04, 2017
+-- General --
+    Restructure the project files, so now is easier to use the
+    CoreClock library, by just include CoreClock/CoreClock.h file.
+
+    Remove the old update script file, since now Amazing Cow has a separate
+    project to do just that. The new script file is just a wrapper around it.
+
+    Update the README to the new standard.
+
+    Make a lot of cosmetic changes on the code.
+
+
+================================================================================
 | Version 0.4.x                                                                |
 ================================================================================
 v0.4.4 - Oct 28, 2017
