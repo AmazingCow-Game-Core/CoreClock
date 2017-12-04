@@ -14,7 +14,7 @@ General:
 * [Amazing Cow's Github](https://github.com/AmazingCow).
 
 Libs:
-* [Amazing Cow's Libs page](https://github.com/AmazingCow).
+* [Amazing Cow's Libs page](https://github.com/AmazingCow-Libs).
 * [Amazing Cow's Libs Github](http://www.amazingcow.com/libs).
 
 
@@ -22,7 +22,6 @@ Libs:
 <!-- ####################################################################### -->
 <!-- Description                                                             -->
 <!-- ####################################################################### -->
-
 
 ## Description:
 
